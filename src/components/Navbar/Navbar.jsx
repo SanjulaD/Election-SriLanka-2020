@@ -8,6 +8,7 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap';
+import { withRouter , Link } from 'react-router-dom';
 
 const NavbarComponent = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,14 @@ const NavbarComponent = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components">Political Parties</NavLink>
+              <Link to="/parties">
+                <NavLink>Political Parties</NavLink>
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/candidates">
+                <NavLink>Candidates</NavLink>
+              </Link>
             </NavItem>
             <NavItem>
               <NavLink href="https://github.com/SanjulaD">GitHub</NavLink>
@@ -34,4 +42,4 @@ const NavbarComponent = (props) => {
   );
 }
 
-export default NavbarComponent;
+export default withRouter(NavbarComponent);

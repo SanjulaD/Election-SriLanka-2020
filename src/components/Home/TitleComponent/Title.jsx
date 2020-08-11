@@ -1,6 +1,6 @@
 import React from 'react';
-import PartyList from '../PartyList/PartyList';
 import { Jumbotron } from 'reactstrap';
+import PartyDetails from '../PartyList/DistrictDetails/DistrictDetails';
 
 const Title = (props) => {
   return (
@@ -10,7 +10,7 @@ const Title = (props) => {
         <hr className="my-2 mt-4" />
         <p className="lead">Powered By Janawarama API</p>
       </Jumbotron>
-      <PartyList />
+      <PartyDetails />
     </div>
   );
 };
